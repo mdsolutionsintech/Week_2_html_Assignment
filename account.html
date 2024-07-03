@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Login to your account</h2>
+            <form id="loginForm" onsubmit="return loginUser()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Expense Tracker</p>
+    </footer>
+
+    <script>
+        function loginUser() {
+            // Fetch username and password from form
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Here you would typically perform validation and authentication
+            // For demo purposes, let's simulate successful login
+            // Replace with actual login logic (e.g., AJAX request to server)
+
+            // Simulating successful login
+            if (username === 'david' && password === 'muyumba') {
+                // Redirect to the next page after successful login
+                window.location.href = 'add_expense.html'; // Replace with actual page URL
+                return false; // Prevent form submission (not needed if using AJAX)
+            } else {
+                alert('Invalid username or password'); // Replace with actual error handling
+                return false; // Prevent form submission (not needed if using AJAX)
+            }
+        }
+    </script>
+</body>
+</html>
